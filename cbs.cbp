@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="cbs" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/cbs" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-m64" />
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="/usr/include/mysql" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add library="mysqlclient_r" />
+					<Add library="pthread" />
+					<Add library="dl" />
+					<Add directory="/usr/lib64/mysql" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/cbs" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="include" />
+			<Add directory="/usr/include" />
+			<Add directory="/udr/include/mysql" />
+		</Compiler>
+		<Linker>
+			<Add directory="/usr/lib64" />
+			<Add directory="/usr/lib64/mysql" />
+		</Linker>
+		<Unit filename="include/classBill.h" />
+		<Unit filename="include/classConn.h" />
+		<Unit filename="include/classCustomer.h" />
+		<Unit filename="include/classDraw.h" />
+		<Unit filename="include/classGetchar.h" />
+		<Unit filename="include/classGetchoice.h" />
+		<Unit filename="include/classProduct.h" />
+		<Unit filename="include/classSqlProcess.h" />
+		<Unit filename="include/classValid.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/classBill.cpp" />
+		<Unit filename="src/classConn.cpp" />
+		<Unit filename="src/classCustomer.cpp" />
+		<Unit filename="src/classDraw.cpp" />
+		<Unit filename="src/classGetchar.cpp" />
+		<Unit filename="src/classGetchoice.cpp" />
+		<Unit filename="src/classProduct.cpp" />
+		<Unit filename="src/classSqlProcess.cpp" />
+		<Unit filename="src/classValid.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
